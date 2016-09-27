@@ -1,0 +1,21 @@
+ <div class="container">
+  <div class="row row-offcanvas row-offcanvas-right main">
+  <div class="col-xs-12 col-sm-9">
+      <p class="pull-right visible-xs location">
+        <button type="button" class="btn btn-success btn-xs" data-toggle="offcanvas">カテゴリー選択</button>
+      </p>
+      <% @category.each do |category| %>
+      <h3 class="category">カテゴリー：<%= category.name %></h3>
+      <% end %>
+      <%= render partial:"site", collection: @site %>
+      <h4 class="page"><%= paginate(@site) %></h4>
+    </div><!--/.col-xs-12.col-sm-9-->
+    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+      <div class="list-group">
+        <% @categories.each do |category| %>
+        <%= link_to "#{category.name}",web_path(category.id),class:"list-group-item" %>
+        <% end %>
+      </div>
+    </div><!--/.sidebar-offcanvas-->
+  </div><!-- /.row -->
+  </div><!-- /.container -->

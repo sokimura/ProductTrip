@@ -1,0 +1,27 @@
+  <div class="tittle-image">
+    <%= image_tag "top_image2.jpg", class:"top_image visible-sm visible-md visible-lg" %>
+    <h3 class="phrase visible-sm visible-md visible-lg">革新的なウェブサービスはあなたの生活を変える</h3>
+  </div>
+  <div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs location">
+            <button type="button" class="btn btn-success btn-xs" data-toggle="offcanvas">カテゴリー選択</button>
+          </p>
+          <h3 class="category">カテゴリー：全て</h3>
+          <%= render partial:"site", collection: @site %>
+          <div class="page"><%= paginate(@site) %></div>
+        </div><!--/.col-xs-12.col-sm-9-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <% @categories.each do |category| %>
+            <%= link_to "#{category.name}",web_path(category.id),class:"list-group-item" %>
+            <% end %>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->

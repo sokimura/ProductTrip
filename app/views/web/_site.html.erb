@@ -1,0 +1,20 @@
+      <div class="jumbotron">
+        <h4 class="font"><%= site.name %></h4>
+        <% site.text %>
+        <div class="image-box col-sm-6">
+          <img class="image col-xs-12 col-sm-12" src="<%= site.image_url %>" alt="<%= site.name %>">
+        </div>
+        <div class="col-sm-6 textbox">
+        <h4 class="url"><%= link_to site.site_url,"#{site.site_url}", :target=>["_blank"] %></h4>
+        <p class="acMenu detail">詳細を見る</p>
+        <div id="slideBox">
+          <p class="text font"><%= simple_format(site.text)%></p>
+<!-- <iframe src=<%= site.text %>></iframe> -->
+        </div>
+        </div>
+      </div>
+
+
+
+
+
