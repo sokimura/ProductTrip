@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # sdevise_for :admin_users, ActiveAdmin::Devise.config
-  # ActiveAdmin.routes(self)
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :web
   root :to => 'web#index'
   get 'webs/:id' => 'web#show'
