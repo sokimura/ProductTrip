@@ -194,7 +194,7 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .sidebar-offcanvas{
+  #sidebar{
     display: block;
   }
 }

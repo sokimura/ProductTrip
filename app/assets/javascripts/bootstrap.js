@@ -19,6 +19,10 @@ $(function(){
   $('[data-toggle="offcanvas"]').click(function () {
     $('.row-offcanvas').toggleClass('active');
   });
+  
+  $('.list-group-item').click(function(){
+     window.location.reload() ;
+   });
 
   $('.kimura').click(function(){
     window.location.reload() ;
