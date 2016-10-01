@@ -79,4 +79,5 @@ Rails.application.configure do
   config.assets.precompile +=['active_admin.js','active_admin.css']
   # config.assets.precompile += %w( admin/production.css )
   # config.web_console.development_only = false
+  config.serve_static_assets = true
 end
