@@ -6799,11 +6799,7 @@ button.close {
 /*  overflow: hidden;*/
 }
 
-/*@media screen and (max-width: 768px) {
-  #sidebar{
-    display: block;
-  }
-}*/
+
 
 @media screen and (max-width: 768px) {
 .row {
