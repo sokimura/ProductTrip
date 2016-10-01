@@ -80,4 +80,5 @@ Rails.application.configure do
   # config.assets.precompile += %w( admin/production.css )
   # config.web_console.development_only = false
   config.serve_static_assets = true
+  config.assets.precompile += %w( offcanvas.js )
 end
