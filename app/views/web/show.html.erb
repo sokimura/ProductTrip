@@ -10,7 +10,7 @@
       <%= render partial:"site", collection: @site %>
       <h4 class="page"><%= paginate(@site) %></h4>
     </div><!--/.col-xs-12.col-sm-9-->
-    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+    <div class="col-sm-3 sidebar-offcanvas" id="sidebar">
       <div class="list-group">
         <% @categories.each do |category| %>
         <%= link_to "#{category.name}",web_path(category.id),class:"list-group-item" %>
