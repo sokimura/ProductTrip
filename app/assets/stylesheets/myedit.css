@@ -193,6 +193,12 @@ p {
   margin: 50px 0 0;
 }
 
+@media screen adn (max-width: 768px) {
+  .sidebar-offcanvas{
+    display: block;
+  }
+}
+
 
 iframe {
   frameborder:0; 

@@ -8,6 +8,30 @@ if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
 
+
+$(function(){
+  $(".acMenu").on("click", function() {
+    $(this).next().slideToggle("slow");
+  });
+});
+
+$(function(){
+  $('[data-toggle="offcanvas"]').click(function () {
+    $('.row-offcanvas').toggleClass('active');
+  });
+
+  $('.kimura').click(function(){
+    window.location.reload() ;
+  });
+
+  $('.tittle').click(function(){
+    window.location.reload() ;
+  });
+  $('.pagination').click(function(){
+    window.location.reload() ;
+  });
+});
+
 +function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.')
