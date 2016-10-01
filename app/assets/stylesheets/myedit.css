@@ -172,6 +172,7 @@ p {
   .acMenu {
     display: none;
   }
+}
 
 .url {
   clear: both;
@@ -179,7 +180,7 @@ p {
   padding-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .url{ border-bottom: 1px solid gray;
 }}
 
