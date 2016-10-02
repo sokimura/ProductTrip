@@ -270,6 +270,7 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
+  config.comments = false
   config.clear_stylesheets!
   config.register_stylesheet 'admin/active_admin.css'
 

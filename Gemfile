@@ -49,6 +49,8 @@ group :development, :production do
   gem 'pry-rails'
   gem 'jquery-turbolinks'
   gem 'kaminari'
+  gem 'carrierwave'
+  gem 'fog'
 end
 
 group :production, :staging do
