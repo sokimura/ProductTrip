@@ -135,7 +135,7 @@ p {
 /*   max-width: 300px;*/
    height: auto;
    margin: 0 auto;
-   padding: 0 0 10px;
+   padding: 0 0 20px;
 }
 
 .image-box {
@@ -144,12 +144,12 @@ p {
   }*/
 /*  overflow: hidden;
   height: 30vmax;*/
-  padding-bottom: 15px;
+  padding-bottom: 0px;
 }
 
 /*@media screen and (max-width: 768px) {*/
 .image-box {overflow: hidden;
-  height: 30vmax;
+/*  height: 30vmax;*/
 }
 
 .acMenu {
@@ -211,3 +211,16 @@ footer {
   text-align: center;
 }
 
+
+@media screen and (max-width: 768px) {
+  .col-xs-12 .col-sm-6 {
+    padding-right: 0;
+    padding-left:  0;
+  }
+  .jumbotron {
+  margin: 0 15px 25px;
+  }
+  .image {
+   padding: 0 0 0px;
+  }
+}
