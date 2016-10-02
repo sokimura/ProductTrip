@@ -149,7 +149,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .image-box {overflow: hidden;
-  height: 35vmax;
+  height: 30vmax;
 }
 }
 
