@@ -5,4 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+require "csv"
+
+companies_csv = CSV.readlines("db/sites.csv")
+companies_csv.shift
+companies_csv.each do |row|
+  Company.create(name: row[1], text: row[2], site_url: row[3])
+end
