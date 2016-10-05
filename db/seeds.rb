@@ -7,10 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 require "csv"
-str.encode("UTF-16BE", "UTF-8",
-           invalid: :replace,
-           undef: :replace,
-           replace: '.').encode("UTF-8")
 
 companies_csv = CSV.readlines("db/sites.csv")
 companies_csv.shift
