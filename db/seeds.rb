@@ -11,5 +11,5 @@ require "csv"
 companies_csv = CSV.readlines("db/sites.csv")
 companies_csv.shift
 companies_csv.each do |row|
-  Company.create(name: row[1], text: row[2], site_url: row[3])
+  Site.create(name: row[1], text: row[2], site_url: row[3])
 end
