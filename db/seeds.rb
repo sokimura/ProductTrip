@@ -6,13 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-require 'kconv'
 require "csv"
 
 companies_csv = CSV.readlines("db/sites.csv")
-sites = File.read(companies_csv)
-sites_csv.shift
-sites_csv.each do |row|
+companies_csv.force_encoding('UTF-8')
+companies_csv.shift
+companies_csv.each do |row|
   Site.create(name: row[1], text: row[2], site_url: row[3])
 
 
