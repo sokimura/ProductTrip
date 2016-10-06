@@ -14,7 +14,7 @@ sites_csv = CSV.readlines("db/sites.csv", encoding: 'Shift_JIS:UTF-8')
 # sites_csv.encode("UTF-8", :invalid => :replace)
 sites_csv.shift
 sites_csv.each do |row|
-  Site.create(name: row[1], text: row[2], site_url: row[3], iamge_url: row[4], category_id: row[5], created_at: row[6], updated_at: row[7])
+  Site.create(name: row[1], text: row[2], site_url: row[3], image_url: row[4], category_id: row[5], created_at: row[6], updated_at: row[7])
 
 
 end
