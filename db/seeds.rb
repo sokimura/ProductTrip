@@ -8,11 +8,10 @@
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 require "csv"
 
-companies_csv = CSV.readlines("db/sites.csv")
-companies_csv.force_encoding('UTF-8')
-str = companies_csv.scrub('?')
-str.shift
-str.each do |row|
+sites_csv = CSV.readlines("db/sites.csv")
+sites_csv.encode("UTF-8", :invalid => :replace)
+sites_csv.shift
+sites_csv.each do |row|
   Site.create(name: row[1], text: row[2], site_url: row[3])
 
 
